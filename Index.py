@@ -1,5 +1,5 @@
 import os
-from flask import Flask , render_template 
+from flask import flask , render_template 
 
 
 #render_template crea un plantilla donde podemos llamarla en el return para que todo se ejecute global
