@@ -1,4 +1,6 @@
-from flask import Flask , render_template
+import os
+from flask import Flask , render_template 
+
 
 #render_template crea un plantilla donde podemos llamarla en el return para que todo se ejecute global
 
@@ -34,4 +36,5 @@ def p():
 if __name__ == '__main__':
 
 #debug=true -> especifica que refresca la pagina sin usar 'python pagina.py'
-    app.run(debug = True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
